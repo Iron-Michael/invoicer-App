@@ -1,20 +1,21 @@
 import React from "react";
 
-export const Dates = () => {
+export const Dates = ({ invoiceNumber, invoiceDate, dueDate }) => {
   return (
     <>
       {" "}
       <article className="my-5 flex items-end justify-end ">
         <ul>
-          <li>
+          <li className="p-1">
             {" "}
-            <span className="font-bold">Invoicer Number:</span>{" "}
+            <span className="font-bold">Invoicer Number: </span>
+            {invoiceNumber}
           </li>
-          <li>
-            <span className="font-bold">Invoice date :</span>{" "}
+          <li className="bg-gray-100">
+            <span className="font-bold">Invoice date :</span> {invoiceDate}
           </li>
-          <li>
-            <span className="font-bold">Due Date</span>
+          <li className="p-1">
+            <span className="font-bold">Due Date</span> {dueDate}
           </li>
         </ul>
       </article>
